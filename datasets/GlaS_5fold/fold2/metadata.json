@@ -1,0 +1,9 @@
+{
+  "protocol": "author_protocol_b_test_as_val",
+  "fold": 2,
+  "n_splits": 5,
+  "split_seed": 0,
+  "source_dir": "\\\\sshfs.r\\sk@anhuiuniversity.icu!21103\\Disk\\HDD\\Sk\\EoSeg-main\\Warwick_QU_Dataset",
+  "train_count": 132,
+  "test_count": 33
+}
