@@ -1,0 +1,37 @@
+{
+  "diagnostic": "one fixed batch, same decoder parameters, two losses; no parameter update",
+  "config": "/Disk/HDD/Sk/EoSeg-main/EoSe-main-innovation_point/configs/glas/vit_query_mul_scale_fusion_protocol_b_c1_abl.yaml",
+  "checkpoint": "/Disk/HDD/Sk/EoSeg-main/EoSe-main-innovation_point/runs/glas_protocol_b_fold0_vitl_c1_abl_w0p20_full5fold/version_0/checkpoints/epoch=598-step=5990.ckpt",
+  "data_dir": "/Disk/HDD/Sk/EoSeg-main/EoSe-main-innovation_point/datasets/GlaS_5fold/fold0/Train_Folder",
+  "sample_ids": [
+    "train_1",
+    "train_2"
+  ],
+  "batch_size": 2,
+  "augmentation": "disabled",
+  "model_mode": "eval with autograd enabled",
+  "precision": "32-fp",
+  "base_loss": 0.004368807189166546,
+  "abl_loss_unweighted": 0.005150060635060072,
+  "abl_weight_for_comparison": 0.2,
+  "weighted_abl_loss": 0.0010300121270120145,
+  "selected_group": "shared mask-only decoder (feature_upscale, mask_head, layer_gate, query_embed, layer_fusion_bias)",
+  "selected_parameter_count": 5523718,
+  "selected_tensor_count": 28,
+  "overall": {
+    "base_grad_norm": 0.1502237730691568,
+    "abl_grad_norm_unweighted": 0.09769100287325719,
+    "abl_grad_norm_weighted": 0.01953820057465144,
+    "weighted_abl_to_base_ratio": 0.13006064336872208,
+    "cosine_base_vs_abl": -0.12521814710400261,
+    "weighted_abl_projection_on_base_ratio": -0.01628595277378586,
+    "combined_grad_norm": 0.14904317212273926
+  },
+  "caveats": [
+    "One deterministic batch at one checkpoint is diagnostic, not an across-training estimate.",
+    "FP32 gradient computation avoids AMP underflow but is not identical to the 16-mixed training step.",
+    "Raw gradient ratio/cosine do not equal AdamW update ratio, especially with optimizer state and clipping.",
+    "Parameters unused by mask-only prediction (such as class_head) and the ViT backbone are excluded.",
+    "The explicit --abl-weight is used because the YAML default may differ from this checkpoint's CLI training override."
+  ]
+}
