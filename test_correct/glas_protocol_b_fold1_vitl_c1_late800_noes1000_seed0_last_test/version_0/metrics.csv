@@ -1,0 +1,2 @@
+epoch,metrics/test_acc,metrics/test_boundary_f1,metrics/test_dice,metrics/test_f2,metrics/test_iou,metrics/test_jaccard,metrics/test_precision,metrics/test_recall,step,test/loss,test/loss_abl,test/loss_base
+0,0.8989839553833008,0.640959620475769,0.9030254483222961,0.9137084484100342,0.8262484073638916,0.8262484073638916,0.8880192041397095,0.9216527938842773,0,0.6806686520576477,0.0,0.6806686520576477
