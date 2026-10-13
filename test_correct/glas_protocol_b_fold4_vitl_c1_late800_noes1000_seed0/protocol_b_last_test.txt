@@ -1,0 +1,26 @@
+/Disk/HDD/Sk/miniconda3/envs/DeepLearning_xiakun/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Seed set to 0
+INFO:root:Loaded 375 keys
+Using 16bit Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/Disk/HDD/Sk/miniconda3/envs/DeepLearning_xiakun/lib/python3.11/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│     metrics/test_acc      │    0.9233565330505371     │
+│ metrics/test_boundary_f1  │     0.680497944355011     │
+│     metrics/test_dice     │    0.9141970872879028     │
+│      metrics/test_f2      │    0.9219675064086914     │
+│     metrics/test_iou      │    0.8458355069160461     │
+│   metrics/test_jaccard    │    0.8458355069160461     │
+│  metrics/test_precision   │    0.9057078957557678     │
+│    metrics/test_recall    │    0.9288274645805359     │
+│         test/loss         │    0.41517823934555054    │
+│       test/loss_abl       │            0.0            │
+│      test/loss_base       │    0.41517823934555054    │
+└───────────────────────────┴───────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33/33 0:00:01 • 0:00:00 48.82it/s  

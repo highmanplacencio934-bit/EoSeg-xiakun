@@ -1,0 +1,42 @@
+ M configs/glas/run_protocol_b.sh
+ M configs/glas/vit_query_mul_scale_fusion_protocol_b.yaml
+ M datasets/__pycache__/__init__.cpython-311.pyc
+ M datasets/__pycache__/lightning_data_module.cpython-311.pyc
+ M datasets/__pycache__/medical_binary_semantic.cpython-311.pyc
+ M models/__pycache__/__init__.cpython-311.pyc
+ M models/__pycache__/eoseg.cpython-311.pyc
+ M models/__pycache__/vit.cpython-311.pyc
+ M models/__pycache__/vit_rvsa_mtp.cpython-311.pyc
+ M scripts/summarize_protocol_b.py
+ M training/__pycache__/__init__.cpython-311.pyc
+ M training/__pycache__/lightning_module.cpython-311.pyc
+ M training/__pycache__/medical_binary_segmentation.cpython-311.pyc
+ M training/__pycache__/medical_val_logger.cpython-311.pyc
+ M training/__pycache__/two_stage_warmup_poly_schedule.cpython-311.pyc
+ M training/medical_binary_segmentation.py
+ M training/medical_val_logger.py
+?? BF1_METRIC_CHECK_5FOLD_RESULTS.md
+?? BOUNDARY_F1_IMPLEMENTATION_CHANGE_RECORD.md
+?? EoSeg_BoundaryF1_Baseline_Codex_Plan.md
+?? EoSeg_C1_Late_ABL_Training_Plan.md
+?? EoSeg_Paper_Qualitative_Visualization_Codex_Plan.md
+?? __pycache__/sitecustomize.cpython-311.pyc
+?? codex_abl_per_image_pdb_task.md
+?? configs/glas/run_protocol_b_c1_abl.sh
+?? configs/glas/run_protocol_b_c1_late_abl_noes_1000.sh
+?? configs/glas/vit_query_mul_scale_fusion_protocol_b_c1_abl.yaml
+?? configs/glas/vit_query_mul_scale_fusion_protocol_b_c1_late_abl_noes_1000.yaml
+?? runs/
+?? scripts/__pycache__/
+?? scripts/audit_panel_alignment.py
+?? scripts/diagnose_abl_boundary_overlay.py
+?? scripts/diagnose_abl_gradients.py
+?? scripts/diagnose_abl_sampling.py
+?? scripts/evaluate_boundary_f1_per_image.py
+?? scripts/evaluate_protocol_b_existing_ckpts.sh
+?? scripts/plot_gt_prediction_boundary_overlay.py
+?? tests/
+?? training/__pycache__/active_boundary_loss.cpython-311.pyc
+?? training/__pycache__/boundary_f1.cpython-311.pyc
+?? training/active_boundary_loss.py
+?? training/boundary_f1.py

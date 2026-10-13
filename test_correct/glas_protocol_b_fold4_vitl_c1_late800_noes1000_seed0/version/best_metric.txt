@@ -1,0 +1,12 @@
+best_epoch=691
+monitor=metrics/val_dice
+best_val_dice=0.914189
+best_val_dice=0.914189
+best_val_iou=0.845822
+best_val_jaccard=0.845822
+best_val_recall=0.928845
+best_val_precision=0.905675
+best_val_acc=0.923346
+best_val_f2=0.921975
+val_boundary_f1_at_best_dice_checkpoint=0.680391
+last_update_epoch=691
