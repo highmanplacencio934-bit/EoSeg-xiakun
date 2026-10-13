@@ -1,0 +1,55 @@
+/Disk/HDD/Sk/miniconda3/envs/DeepLearning_xiakun/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Seed set to 0
+Using 16bit Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Using split learning rates: backbone=1.00e-05, decoder=1.00e-04, llrd=0.800
+Loading `train_dataloader` to estimate number of stepping batches.
+/Disk/HDD/Sk/miniconda3/envs/DeepLearning_xiakun/lib/python3.11/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/Disk/HDD/Sk/miniconda3/envs/DeepLearning_xiakun/lib/python3.11/site-packages/lightning/pytorch/utilities/model_summary/model_summary.py:242: Precision 16-mixed is not supported by the model summary.  Estimated model size in MB will not be accurate. Using 32 bits instead.
+
+   | Name                       | Type                 | Params | Mode  | FLOPs
+-------------------------------------------------------------------------------------
+0  | network                    | EoSegMultiQSegFusion | 308 M  | train | 0    
+1  | network.encoder            | ViT                  | 303 M  | train | 0    
+2  | network.encoder.backbone   | VisionTransformer    | 303 M  | train | 0    
+3  | network.feature_upscale    | Sequential           | 2.9 M  | train | 0    
+4  | network.feature_upscale.0  | ConvTranspose2d      | 2.1 M  | train | 0    
+5  | network.feature_upscale.1  | GroupNorm            | 1.0 K  | train | 0    
+6  | network.feature_upscale.2  | GELU                 | 0      | train | 0    
+7  | network.feature_upscale.3  | Conv2d               | 5.1 K  | train | 0    
+8  | network.feature_upscale.4  | GroupNorm            | 1.0 K  | train | 0    
+9  | network.feature_upscale.5  | GELU                 | 0      | train | 0    
+10 | network.feature_upscale.6  | ConvTranspose2d      | 524 K  | train | 0    
+11 | network.feature_upscale.7  | GroupNorm            | 512    | train | 0    
+12 | network.feature_upscale.8  | GELU                 | 0      | train | 0    
+13 | network.feature_upscale.9  | Conv2d               | 2.6 K  | train | 0    
+14 | network.feature_upscale.10 | GroupNorm            | 512    | train | 0    
+15 | network.feature_upscale.11 | GELU                 | 0      | train | 0    
+16 | network.feature_upscale.12 | Conv2d               | 263 K  | train | 0    
+17 | network.mask_head          | Sequential           | 2.1 M  | train | 0    
+18 | network.mask_head.0        | Linear               | 1.0 M  | train | 0    
+19 | network.mask_head.1        | GELU                 | 0      | train | 0    
+20 | network.mask_head.2        | Linear               | 1.0 M  | train | 0    
+21 | network.class_head         | Linear               | 3.1 K  | train | 0    
+22 | network.layer_gate         | Sequential           | 526 K  | train | 0    
+23 | network.layer_gate.0       | Linear               | 524 K  | train | 0    
+24 | network.layer_gate.1       | GELU                 | 0      | train | 0    
+25 | network.layer_gate.2       | Linear               | 1.5 K  | train | 0    
+26 | criterion                  | WeightedDiceBCE      | 0      | train | 0    
+27 | criterion.bce_loss         | WeightedBCE          | 0      | train | 0    
+28 | criterion.dice_loss        | WeightedDiceLoss     | 0      | train | 0    
+29 | active_boundary_loss       | ActiveBoundaryLoss   | 0      | train | 0    
+-------------------------------------------------------------------------------------
+308 M     Trainable params
+0         Non-trainable params
+308 M     Total params
+1,235.523 Total estimated model params size (MB)
+569       Modules in train mode
+0         Modules in eval mode
+0         Total Flops
+`Trainer.fit` stopped: `max_epochs=1000` reached.
+Epoch 999/999 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66/66 0:00:05 • 0:00:00 12.41it/s v_num: 0.000 val/loss: 0.690 metrics/val_dice: 0.889 metrics/train_dice: 0.993

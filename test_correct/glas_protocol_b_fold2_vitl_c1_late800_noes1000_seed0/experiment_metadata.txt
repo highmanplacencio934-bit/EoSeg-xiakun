@@ -1,0 +1,39 @@
+protocol=author_protocol_b_test_as_val
+selection_bias=true
+fold=2
+seed=0
+train_split=datasets/GlaS_5fold/fold2/Train_Folder
+val_split=datasets/GlaS_5fold/fold2/Test_Folder
+test_split=datasets/GlaS_5fold/fold2/Test_Folder
+early_stopping=disabled
+max_epochs=1000
+abl_schedule=late
+abl_start_epoch=800
+abl_effective_weight_before=0.0
+abl_effective_weight_after=0.10
+pdb_sampling_scope=per_image
+pdb_max_n_ratio=0.01
+test_loss=base_only
+checkpoint_selection=metrics/val_dice,mode=max,save_top_k=1
+checkpoint_format=full_training_state
+single_view=true
+tta=false
+threshold=0.5
+pretrained_weight=/Disk/HDD/Sk/.cache/torch/hub/checkpoints/dinov2_vitl14_reg4_pretrain.pth
+pretrained_weight_sha256=36e4deffbaef061a2576705b0c36f93621e2ae20bf6274694821b0b492551b51
+config_sha256=df62fc2d8ead85d898576b18313842711603d8cffb9234e1a2d64febc9f8f7a4
+git_commit=4f1151d1cd785e19efb40b9dff68d67de51bc153
+created_at_utc=2026-10-12T18:56:04Z
+python=Python 3.11.15
+disk_before=/dev/sdc1       1921724608 694320684 1207852408      37% /Disk/HDD
+fit_command=python -X utf8 main.py fit -c configs/glas/vit_query_mul_scale_fusion_protocol_b_c1_late_abl_noes_1000.yaml --trainer.devices 1 --trainer.logger.init_args.name glas_protocol_b_fold2_vitl_c1_late800_noes1000_seed0 --trainer.default_root_dir runs/glas_protocol_b_fold2_vitl_c1_late800_noes1000_seed0 --data.init_args.train_dir datasets/GlaS_5fold/fold2/Train_Folder --data.init_args.val_dir datasets/GlaS_5fold/fold2/Test_Folder --data.init_args.test_dir datasets/GlaS_5fold/fold2/Test_Folder --data.init_args.source_dir ../Warwick_QU_Dataset --compile_disabled 
+best_checkpoint=runs/glas_protocol_b_fold2_vitl_c1_late800_noes1000_seed0/version_0/checkpoints/epoch=698-step=6990.ckpt
+best_checkpoint_sha256=75cd49b3fb0a0917ed41d68d6f40114020231a23c30faed89d29e222555f22de
+best_epoch=698
+best_epoch_after_abl_start=false
+last_checkpoint=runs/glas_protocol_b_fold2_vitl_c1_late800_noes1000_seed0/version_0/checkpoints/last.ckpt
+last_checkpoint_sha256=75cd49b3fb0a0917ed41d68d6f40114020231a23c30faed89d29e222555f22de
+last_epoch=999
+loss_history=runs/glas_protocol_b_fold2_vitl_c1_late800_noes1000_seed0/version_0/metrics.csv
+test_command=python -X utf8 main.py test -c configs/glas/vit_query_mul_scale_fusion_protocol_b_c1_late_abl_noes_1000.yaml --model.init_args.ckpt_path runs/glas_protocol_b_fold2_vitl_c1_late800_noes1000_seed0/version_0/checkpoints/epoch=698-step=6990.ckpt --trainer.devices 1 --trainer.logger.init_args.name glas_protocol_b_fold2_vitl_c1_late800_noes1000_seed0_test --trainer.default_root_dir runs/glas_protocol_b_fold2_vitl_c1_late800_noes1000_seed0_test --data.init_args.train_dir datasets/GlaS_5fold/fold2/Train_Folder --data.init_args.val_dir datasets/GlaS_5fold/fold2/Test_Folder --data.init_args.test_dir datasets/GlaS_5fold/fold2/Test_Folder --data.init_args.source_dir ../Warwick_QU_Dataset --compile_disabled 
+last_test_command=python -X utf8 main.py test -c configs/glas/vit_query_mul_scale_fusion_protocol_b_c1_late_abl_noes_1000.yaml --model.init_args.ckpt_path runs/glas_protocol_b_fold2_vitl_c1_late800_noes1000_seed0/version_0/checkpoints/last.ckpt --trainer.devices 1 --trainer.logger.init_args.name glas_protocol_b_fold2_vitl_c1_late800_noes1000_seed0_last_test --trainer.default_root_dir runs/glas_protocol_b_fold2_vitl_c1_late800_noes1000_seed0_last_test --data.init_args.train_dir datasets/GlaS_5fold/fold2/Train_Folder --data.init_args.val_dir datasets/GlaS_5fold/fold2/Test_Folder --data.init_args.test_dir datasets/GlaS_5fold/fold2/Test_Folder --data.init_args.source_dir ../Warwick_QU_Dataset --compile_disabled 
